@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/logo.svg" alt="Reasonix" width="640"/>
+  <img src="docs/logo-ghost-wave-effect.svg" alt="Reasonix" width="360"/>
 </p>
 
 <h1 align="center">Reasonix Support Vision Model</h1>
@@ -11,9 +11,26 @@
 
 <p align="center">
   <a href="https://github.com/Junjie88/Reasionix-SupportVisionModel/tree/main-v2"><img src="https://img.shields.io/badge/branch-main--v2-2f81f7?style=flat-square" alt="main-v2 branch"/></a>
-  <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-8b949e?style=flat-square" alt="MIT license"/></a>
+  <a href="https://linux.do/"><img src="https://img.shields.io/badge/community-LINUX.DO-1f883d?style=flat-square" alt="LINUX DO community"/></a>
   <a href="https://github.com/esengine/DeepSeek-Reasonix"><img src="https://img.shields.io/badge/upstream-Reasonix-3fb950?style=flat-square" alt="Reasonix upstream"/></a>
 </p>
+
+<p align="center">
+  <a href="https://trendshift.io/repositories/27020?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-27020" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/27020/monthly?language=Go" alt="esengine/DeepSeek-Reasonix | Trendshift" width="250" height="55"/></a>
+  <a href="https://trendshift.io/repositories/27020?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-27020" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/repositories/27020" alt="esengine/DeepSeek-Reasonix | Trendshift" width="250" height="55"/></a>
+</p>
+
+<br/>
+
+<p align="center"><strong>Open source · MIT · a single Go binary</strong></p>
+<h3 align="center">A coding agent you can leave running.</h3>
+<p align="center">One local engine, four ways in — terminal, desktop app, browser, or your editor over ACP. Plan mode, permissions, a workspace sandbox and per-turn checkpoints keep a long autonomous run something you can still read and undo.</p>
+
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/ab2f3878-e224-4931-8254-060e7695cfb9" controls preload="metadata" width="560"></video>
+</div>
+
+<br/>
 
 > [!IMPORTANT]
 > 本项目不是 Reasonix 官方发行版，而是基于
@@ -126,6 +143,32 @@ git clone -b main-v2 https://github.com/Junjie88/Reasionix-SupportVisionModel.gi
 cd Reasionix-SupportVisionModel
 ```
 
+#### CLI
+
+The CLI build requires **Go 1.25+**. The module pins a `toolchain` directive;
+keep `GOTOOLCHAIN=auto` so Go downloads the pinned toolchain, or install it.
+
+```sh
+make build      # -> bin/reasonix(.exe)
+make cross      # -> dist/ (darwin|linux|windows × amd64|arm64)
+```
+
+#### Desktop
+
+The desktop build additionally requires:
+
+- **Node 24+ and pnpm 10** (`npm install -g pnpm@10`) for the frontend
+- **Wails CLI** matching the shared `.wails-version` pin
+
+```sh
+make wails-install
+cd desktop
+wails build
+```
+
+See the [desktop build guide](desktop/README.md#prerequisites) for platform
+webview dependencies and Linux build tags.
+
 ### CLI / TUI
 
 项目使用 Go 1.25 或更高版本：
@@ -176,6 +219,18 @@ git push origin main-v2
 ```
 
 合并前建议先运行相关 Go 测试和桌面前端生产构建。
+
+<!-- reasonix-top-contributors:start -->
+| Contributor | Contributor | Contributor | Contributor |
+| --- | --- | --- | --- |
+| [**SivanCola**](https://github.com/SivanCola) | [**esengine**](https://github.com/esengine) | [**ttmouse**](https://github.com/ttmouse) | [**lifu963**](https://github.com/lifu963) |
+| **reasonix** | [**HUQIANTAO**](https://github.com/HUQIANTAO) | [**GTC2080**](https://github.com/GTC2080) | [**light-front-theory**](https://github.com/light-front-theory) |
+| **merge-order-check** | [**Li-Charles-One**](https://github.com/Li-Charles-One) | [**eghrhegpe**](https://github.com/eghrhegpe) | **wufengfan** |
+| [**CVEngineer66**](https://github.com/CVEngineer66) | [**dependabot\[bot\]**](https://github.com/apps/dependabot) | [**lanshi17**](https://github.com/lanshi17) | [**SuMuxi66**](https://github.com/SuMuxi66) |
+| [**CnsMaple**](https://github.com/CnsMaple) | [**cyq1017**](https://github.com/cyq1017) | [**JesonChou**](https://github.com/JesonChou) | [**XTLine**](https://github.com/XTLine) |
+<!-- reasonix-top-contributors:end -->
+
+Special thanks to [**Bernardxu123**](https://github.com/Bernardxu123) for designing the project logo and intro video.
 
 ## 隐私说明
 
